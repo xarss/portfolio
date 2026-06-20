@@ -4,13 +4,40 @@
  */
 const PORTFOLIO_DATA = {
   cnpj: "66.303.146.0001-14",
-  keywords: ["Fullstack", "SEO", "Next.js", "React", "Tailwind", "Supabase", "Vite", "GitHub Pages", "Vercel"],
+  keywords: [
+    "Desenvolvimento web",
+    "Landing page",
+    "Site institucional",
+    "Autenticação",
+    "SEO",
+    "Blog",
+    "GitHub Pages",
+    "Gerenciamento de conteúdo",
+    "Hospedagem",
+    "Integração de pagamentos"
+  ],
   projects: [
+    {
+      title: "Carolina Ferrari",
+      url: "https://xarss.github.io/carolina-ferrari/",
+      stack: ["React", "Vite", "GitHub Pages"],
+      done: ["Landing page", "Redirecionamento de leads", "Captura de avaliações"],
+      description: "Landing page pessoal para Ginecologista e Obstetra, com informações sobre serviços, localização e contato.",
+      img: "assets/carolinaferrari.png"
+    },
+    {
+      title: "Instituto Fica Comigo",
+      url: "https://institutoficacomigo.org.br/",
+      stack: ["Next.js", "React", "Tailwind", "Supabase"],
+      done: ["Site institucional", "Landing page", "Autenticação", "Gerenciamento de conteúdo", "Sistema de Bingo"],
+      description: "Site institucional para ONG de combate ao abandono animal, com captação de voluntários, gerenciamento de conteúdo e sistema de bingo interativo. Galeria de animais para adoção e ",
+      img: "assets/ficacomigo.png"
+    },
     {
       title: "Fada Madrinha",
       url: "https://fadamadrinha.app.br/",
       stack: ["Next.js", "React", "Tailwind"],
-      done: ["Landing page", "SEO", "Blog"],
+      done: ["Landing page", "SEO", "Blog", "Dashboard", "Engenharia de Sistemas"],
       description: "Plataforma para conectar padrinhos e madrinhas à animais de ONGS, com sistema de apadrinhamento recorrente, controle de adoções e castração e newsletter.",
       img: "assets/fadamadrinha.png"
     },
@@ -23,26 +50,10 @@ const PORTFOLIO_DATA = {
       img: "assets/rifanopix.png"
     },
     {
-      title: "Instituto Fica Comigo",
-      url: "https://institutoficacomigo.org.br/",
-      stack: ["Next.js", "React", "Tailwind", "Supabase"],
-      done: ["Site institucional", "Landing page", "Autenticação", "Gerenciamento de conteúdo", "Sistema de Bingo"],
-      description: "Site institucional para ONG de combate ao abandono animal, com captação de voluntários, gerenciamento de conteúdo e sistema de bingo interativo. Galeria de animais para adoção e ",
-      img: "assets/ficacomigo.png"
-    },
-    {
-      title: "Carolina Ferrari",
-      url: "https://xarss.github.io/carolina-ferrari/",
-      stack: ["React", "Vite", "GitHub Pages"],
-      done: ["Landing page"],
-      description: "Landing page pessoal para Ginecologista e Obstetra, com informações sobre serviços, localização e contato.",
-      img: "assets/carolinaferrari.png"
-    },
-    {
       title: "Webmed Studio",
       url: "https://webmedstudio.vercel.app/",
       stack: ["Next.js", "React", "Vercel"],
-      done: ["Landing page"],
+      done: ["Landing page", "Criação de site", "SEO", "Google Meu Negócio", "Blog"],
       description: "Studio de website, SEO e google ads na área da saúde.",
       img: "assets/webmed.png"
     }
