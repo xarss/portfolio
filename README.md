@@ -29,10 +29,10 @@ Open `data/portfolio.js`. Everything on the page comes from there.
 
 ## Mobile
 
-At 960px wide and below the menu becomes a hamburger dropdown (name, theme icon and hamburger in a
+At 1040px wide and below the menu becomes a hamburger dropdown (name, theme icon and hamburger in a
 sticky header). The menu closes when a link is tapped, on Escape, or when tapping outside it. Phones
 (640px and below) also get tighter spacing. Breakpoints are at the bottom of `css/style.css`
-(and `min-width: 961px` in `js/main.js` must match the 960px one).
+(and `min-width: 1041px` in `js/main.js` must match the 1040px one).
 
 ## Themes
 

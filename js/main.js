@@ -58,18 +58,19 @@
   }
   renderFacts($('hero-facts'), p.facts);
 
-  // ---------- top menu: the categories, then the other sections ----------
+  // ---------- top menu, in page order: work experience, the categories, about, contact ----------
   const nav = $('nav');
   const visibleCategories = data.categories.filter((cat) => data.projects.some((pr) => pr.category === cat.id));
+  nav.append(el('a', { href: '#experience' }, 'work experience'));
   visibleCategories.forEach((cat) => {
     nav.append(el('a', { href: '#' + cat.id, 'data-color': cat.color }, el('span', { class: 'dot' }), cat.label.toLowerCase()));
   });
-  ['experience', 'about', 'contact'].forEach((id) => nav.append(el('a', { href: '#' + id }, id)));
+  ['about', 'contact'].forEach((id) => nav.append(el('a', { href: '#' + id }, id)));
 
   // ---------- mobile menu (hamburger) ----------
   // On small screens the menu is a dropdown opened by the hamburger button.
   const menuButton = $('menu-toggle');
-  const desktop = window.matchMedia('(min-width: 961px)');
+  const desktop = window.matchMedia('(min-width: 1041px)');
 
   function setMenu(open) {
     nav.classList.toggle('open', open);
@@ -265,5 +266,14 @@
   const mail = $('mail');
   mail.href = 'mailto:' + p.email;
   mail.textContent = p.email;
+
+  // WhatsApp: wa.me wants the number as digits only, with the country code (55 = Brazil)
+  if (p.phone) {
+    const phone = $('phone');
+    phone.href = 'https://wa.me/' + p.phone.replace(/\D/g, '');
+    phone.textContent = p.phone;
+    phone.setAttribute('aria-label', 'WhatsApp ' + p.phone + ' (opens in a new tab)');
+    $('phone-item').hidden = false;
+  }
   p.links.forEach((l) => $('contact-links').append(el('a', { href: l.url, target: '_blank', rel: 'noopener' }, l.label.toLowerCase(), ' ↗')));
 })();

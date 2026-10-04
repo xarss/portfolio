@@ -26,10 +26,13 @@ const PORTFOLIO_DATA = {
         note: "Open for {blue:remote} jobs and on site jobs in {yellow:Europe}."
       },
       { label: "status", value: "Open to Fullstack, Data and IT Automation roles or freelance projects" },
-      { label: "stack",  value: "Python, JavaScript, TypeScript, SQL, PowerShell, C#, React, Next.js, Vue.js, Angular, Node.js, FastAPI, .NET, Azure, Docker, AI Assisted Code" }
-      { label: "languages",  value: "" }
+      { label: "stack",  value: "Python, JavaScript, TypeScript, SQL, PowerShell, C#, React, Next.js, Vue.js, Angular, Node.js, FastAPI, .NET, Azure, Docker, AI Assisted Code" },
+      { label: "languages", value: "{green:Portuguese} (native), {blue:English} (fluent), {yellow:Spanish} (basic)" }
     ],
     email: "guichiwawa@gmail.com",
+    // Shown in the contact section as a WhatsApp link (the number is used as is,
+    // only its digits go into the link).
+    phone: "+55 (41) 99219-1032",
     contactHeading: "Let's talk.",
     links: [
       { label: "LinkedIn", url: "https://www.linkedin.com/in/guilherme-schwarz-softwareengineer" },
@@ -37,6 +40,47 @@ const PORTFOLIO_DATA = {
       { label: "CV",       url: "https://xarss.github.io/cv/" }
     ]
   },
+
+  // ---------------------------------------------------------------------------
+  // WORK EXPERIENCE (shown first, before the projects)
+  // Newest first. In bullets, {red:...} marks the "before / bad" number and
+  // {green:...} the "after / good" result. `tech` is optional, per bullet.
+  // ---------------------------------------------------------------------------
+  experience: [
+    {
+      company: "ExxonMobil",
+      role: "Data Analyst & Full-Stack Developer",
+      period: "Jan 2023 — Jan 2026",
+      path: "Data Analyst Trainee (Jan 2023 — Jan 2024) → Data Analyst & Full-Stack Developer (Jan 2024 — Jan 2026)",
+      summary: "Supporting business teams with data, automation and internal tools. In practice, a software engineer role focused on IT process automation and data engineering, building full-stack tools for non-technical users.",
+      bullets: [
+        {
+          text: "Created an internal Data Lake that replaced {red:6+ hour vendor API extractions} with {green:up-to-date SQL tables}, enabling {green:near-instant queries}, live dashboards and data-driven automations.",
+          tech: ["SQL Server", "PowerShell", "Power BI"]
+        },
+        {
+          text: "Developed self-service tools for business data management, cutting manual tasks that took {red:2-8 hours per day} down to {green:minutes of validation} while also {green:preventing human error}.",
+          tech: ["React", "Next.js", ".NET", "Entity Framework", "SQL Server", "Azure", "shadcn"]
+        },
+        {
+          text: "Migrated legacy code from on-premises servers to GitHub and implemented a CI/CD pipeline with Development, Acceptance and Production environments, deploying to multiple servers and setting code standards for the team."
+        },
+        {
+          text: "Automated recurring daily, weekly and monthly IT support tasks that took {red:15-45 minutes each}, {green:freeing the team for higher-value work}."
+        },
+        {
+          text: "Automated data reports that used to be requested and built manually, {green:delivering ready-to-use data} to Subject Matter Experts."
+        },
+        {
+          text: "Acted as the bridge between business teams and IT, turning manual processes into simple tools."
+        }
+      ],
+      technologies: [
+        "React", "Next.js", ".NET", "SQL Server", "PowerShell", "Shell Scripting", "Azure",
+        "Power BI", "GitHub", "GitHub Actions", "Windows Server", "Agile Scrum"
+      ]
+    }
+  ],
 
   // ---------------------------------------------------------------------------
   // PROJECT CATEGORIES
@@ -230,47 +274,6 @@ const PORTFOLIO_DATA = {
       ],
       images: [
         { src: "assets/projects/goofy-glory.jpg", alt: "Goofy Glory arena: a king on his throne watching an orange and a blue court jester about to fight" }
-      ]
-    }
-  ],
-
-  // ---------------------------------------------------------------------------
-  // EXPERIENCE
-  // Newest first. In bullets, {red:...} marks the "before / bad" number and
-  // {green:...} the "after / good" result. `tech` is optional, per bullet.
-  // ---------------------------------------------------------------------------
-  experience: [
-    {
-      company: "ExxonMobil",
-      role: "Data Analyst & Full-Stack Developer",
-      period: "Jan 2023 — Jan 2026",
-      path: "Data Analyst Trainee (Jan 2023 — Jan 2024) → Data Analyst & Full-Stack Developer (Jan 2024 — Jan 2026)",
-      summary: "Supporting business teams with data, automation and internal tools. In practice, a software engineer role focused on IT process automation and data engineering, building full-stack tools for non-technical users.",
-      bullets: [
-        {
-          text: "Created an internal Data Lake that replaced {red:6+ hour vendor API extractions} with {green:up-to-date SQL tables}, enabling {green:near-instant queries}, live dashboards and data-driven automations.",
-          tech: ["SQL Server", "PowerShell", "Power BI"]
-        },
-        {
-          text: "Developed self-service tools for business data management, cutting manual tasks that took {red:2-8 hours per day} down to {green:minutes of validation} while also {green:preventing human error}.",
-          tech: ["React", "Next.js", ".NET", "Entity Framework", "SQL Server", "Azure", "shadcn"]
-        },
-        {
-          text: "Migrated legacy code from on-premises servers to GitHub and implemented a CI/CD pipeline with Development, Acceptance and Production environments, deploying to multiple servers and setting code standards for the team."
-        },
-        {
-          text: "Automated recurring daily, weekly and monthly IT support tasks that took {red:15-45 minutes each}, {green:freeing the team for higher-value work}."
-        },
-        {
-          text: "Automated data reports that used to be requested and built manually, {green:delivering ready-to-use data} to Subject Matter Experts."
-        },
-        {
-          text: "Acted as the bridge between business teams and IT, turning manual processes into simple tools."
-        }
-      ],
-      technologies: [
-        "React", "Next.js", ".NET", "SQL Server", "PowerShell", "Shell Scripting", "Azure",
-        "Power BI", "GitHub", "GitHub Actions", "Windows Server", "Agile Scrum"
       ]
     }
   ],
