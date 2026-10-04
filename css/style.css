@@ -104,7 +104,8 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* section links stop below the sticky header */
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
 body {
   margin: 0;
@@ -141,14 +142,20 @@ h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0; }
 
 /* ---------- header ---------- */
 
+/* the header stays at the top while scrolling, on every screen size */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 0 24px;
   padding: 12px 0;
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
+  transition: background-color 0.25s;
 }
 
 .brand {
@@ -267,6 +274,7 @@ h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0; }
   margin-top: 6px;
   font-size: 18px;
   line-height: 1.35;
+  white-space: pre-line; /* a line break in the data starts a new line */
 }
 
 .facts dd.note {
@@ -449,8 +457,23 @@ h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0; }
 }
 
 .p-icon::after { transform: rotate(90deg); }
-.project[open] .p-icon::after { transform: rotate(0deg); }
-.project summary:hover .p-icon { color: var(--strong); }
+.project[open] .p-icon::after,
+.collapsible[open] .p-icon::after { transform: rotate(0deg); }
+.project summary:hover .p-icon,
+.collapsible > summary:hover .p-icon { color: var(--strong); }
+
+/* a section whose heading folds it open and closed (work experience) */
+.collapsible > summary {
+  min-height: 48px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.collapsible > summary::-webkit-details-marker { display: none; }
+.collapsible > summary h2 { transition: color 0.15s; }
+.collapsible > summary:hover h2 { color: var(--strong); }
+.collapsible > summary:focus-visible { outline-offset: 2px; }
+.collapse-body { overflow: hidden; }
 
 /* .project-body is the part that grows and shrinks (animated from js/main.js);
    the padding lives on .project-inner so the height can reach 0. */
@@ -597,6 +620,20 @@ h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0; }
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--muted);
+}
+
+.job-when-company {
+  margin-bottom: 6px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+/* when the two columns stack (small screens) the name already shows above the role */
+@media (max-width: 838px) {
+  .job-when-company { display: none; }
 }
 
 .job-body { flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
@@ -789,19 +826,9 @@ h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0; }
 
 .menu-toggle { display: none; }
 
-/* tablets and phones: hamburger menu + sticky header */
+/* tablets and phones: hamburger menu */
 @media (max-width: 1040px) {
-  /* section links stop below the sticky header */
-  html { scroll-padding-top: 76px; }
-
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 30;
-    flex-wrap: nowrap;
-    background: var(--bg);
-    transition: background-color 0.25s;
-  }
+  .site-header { flex-wrap: nowrap; }
 
   .header-right { flex-wrap: nowrap; gap: 0; }
 

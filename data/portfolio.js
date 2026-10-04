@@ -52,10 +52,12 @@ const PORTFOLIO_DATA = {
     { label: "languages",   color: "blue",   value: "Python, JavaScript, TypeScript, SQL, PowerShell, Shell Scripting, C#" },
     { label: "frameworks",  color: "purple", value: "React, Next.js, Angular, Shadcn, Vue.js, Node.js, FastAPI, .NET, Entity Framework" },
     { label: "data",        color: "green",  value: "Pandas, NumPy, OpenCV, Snowpark, SQLAlchemy, Power BI, ETL" },
-    { label: "automation",  color: "red",    value: "Git / GitHub, GitHub Actions, CI/CD, Docker, PowerShell, Shell Scripting, Azure, DataDog, Agile / Scrum" },
+    { label: "automation",  color: "red",    value: "Git / GitHub, GitHub Actions, CI/CD, Docker, PowerShell, Shell Scripting, Azure, DataDog" },
     { label: "databases",   color: "cyan",   value: "SQL Server, MySQL, MongoDB, Supabase (PostgreSQL)" },
-    { label: "other",       color: "pink",   value: "REST APIs, Webhooks, Payments (Stripe, Asaas, AbacatePay, Efí), Game Dev (Pygame, GameMaker, Unity, Godot, ct.js), Pixel Art (Pixsquare)" },
-    { label: "education",   color: "yellow", value: "Bachelor in Computer Science, Pontifical Catholic University of Paraná (PUCPR), 2025" }
+    { label: "other",       color: "pink",   value: "REST APIs, Webhooks, Payments (Stripe, Asaas, AbacatePay, Efí), Agile / Scrum" },
+    { label: "game development", color: "purple", value: "ct.js, GameMaker, Unity, Pygame, Godot, Pixel Art (Pixsquare)" },
+    // (a line break in a value starts a new line)
+    { label: "education",   color: "yellow", value: "Bachelor in Computer Science, Pontifical Catholic University of Paraná (PUCPR)\nDual high school diploma: Brazilian high school and Way American School" }
   ],
 
   // ---------------------------------------------------------------------------
@@ -157,7 +159,7 @@ const PORTFOLIO_DATA = {
     },
     {
       category: "projects",
-      title: "Little Man Computer Sim",
+      title: "Little Man Computer Simulator",
       tagline: "Simulator of an educational computer",
       meta: "University project · Pair",
       description: "Real-time simulator of the Little Man Computer, an educational model of a computer, with optional cache and pipelining so their effect on performance can be seen. Built with a classmate for a Performance in Cyber-Physical Systems course at PUCPR.",
@@ -246,7 +248,8 @@ const PORTFOLIO_DATA = {
       ],
       stack: ["ct.js", "JavaScript", "Pixsquare", "itch.io"],
       links: [
-        { label: "Jam version on itch.io", url: "https://xarss.itch.io/strange-caves" }
+        { label: "Jam version on itch.io", url: "https://xarss.itch.io/strange-caves" },
+        { label: "GitHub",                url: "https://github.com/xarss/planet-researcher" }
       ],
       images: [
         { src: "assets/projects/planet-researcher.jpg", alt: "Planet Researcher: a small astronaut standing on a grassy hill with bushes under a pale blue sky" }
@@ -292,6 +295,24 @@ const PORTFOLIO_DATA = {
       images: [
         { src: "assets/projects/goofy-glory.jpg", alt: "Goofy Glory arena: a king on his throne watching an orange and a blue court jester about to fight" }
       ]
+    },
+    {
+      category: "games",
+      title: "pygame-base-framework",
+      tagline: "Open-source boilerplate to start Pygame games faster",
+      meta: "Personal project · Open source",
+      description: "Open-source boilerplate framework that speeds up building new Pygame games. I wanted to build my own library to ease the process of making Pygame games.",
+      highlights: [
+        "Game architecture",
+        "Reusable code design",
+        "Developer tooling for starting new Pygame projects",
+        "Published as open source on GitHub"
+      ],
+      stack: ["Python", "Pygame", "GitHub"],
+      links: [
+        { label: "GitHub", url: "https://github.com/xarss/pygame-base-framework" }
+      ],
+      images: []
     }
   ],
 

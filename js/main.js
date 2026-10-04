@@ -166,7 +166,7 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   function animateBody(details, opening) {
-    const body = details.querySelector('.project-body');
+    const body = details.querySelector('.project-body, .collapse-body');
     if (details._anim) { details._anim.cancel(); details._anim = null; }
     details._closing = !opening;
 
@@ -220,6 +220,10 @@
     if (target && target.classList.contains('project')) {
       target.open = true;
       target.scrollIntoView({ block: 'start' });
+    } else if (target) {
+      // a link to a folded section (work experience) opens it
+      const fold = target.querySelector('details.collapsible');
+      if (fold) fold.open = true;
     }
   }
   window.addEventListener('hashchange', openFromHash);
@@ -230,7 +234,10 @@
   data.experience.forEach((job) => {
     expRoot.append(
       el('article', { class: 'job' },
-        el('div', { class: 'job-when' }, job.period),
+        el('div', { class: 'job-when' },
+          el('div', { class: 'job-when-company' }, job.company),
+          el('div', {}, job.period)
+        ),
         el('div', { class: 'job-body' },
           el('div', {},
             el('div', { class: 'job-company' }, job.company),
@@ -256,6 +263,20 @@
         )
       )
     );
+  });
+
+  // Work experience: the heading folds it open and closed (it starts open).
+  const experienceFold = document.querySelector('#experience details.collapsible');
+  experienceFold.querySelector('summary').addEventListener('click', (e) => {
+    e.preventDefault(); // we open/close it ourselves, with the same animation as the projects
+    animateBody(experienceFold, !experienceFold.open || experienceFold._closing);
+  });
+
+  // A menu link to the folded section opens it.
+  nav.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    const fold = link && document.querySelector(link.getAttribute('href') + ' details.collapsible');
+    if (fold && (!fold.open || fold._closing)) animateBody(fold, true);
   });
 
   // ---------- about ----------
