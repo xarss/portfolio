@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guilherme Schwarz — Fullstack Developer</title>
+  <meta name="description" content="Portfolio of Guilherme Schwarz: fullstack developer, data analyst and IT automation engineer based in Curitiba, Brazil. Games, volunteer work, projects and experience.">
+  <meta name="theme-color" content="#141414">
+  <meta property="og:title" content="Guilherme Schwarz — Fullstack Developer">
+  <meta property="og:description" content="Fullstack developer, data analyst and IT automation engineer. Games, volunteer work, projects and experience.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23141414'/%3E%3Ctext x='50' y='50' dy='.36em' text-anchor='middle' fill='%23eeeeee' font-family='monospace' font-weight='700' font-size='46'%3EGS%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+
+<body>
+  <div class="page" id="top">
+    <div class="wrap">
+
+      <header class="site-header">
+        <a class="brand" href="#top" id="brand"></a>
+        <div class="header-right">
+          <nav class="nav" id="nav" aria-label="Sections"></nav>
+          <button class="theme-toggle" id="theme-toggle" type="button"></button>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero">
+        <h1 id="headline"></h1>
+        <div class="hero-bottom">
+          <dl class="facts facts-hero" id="hero-facts"></dl>
+          <div class="cta">
+            <a class="btn" href="#work">View work</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK: projects grouped by category -->
+      <section id="work" class="section">
+        <div class="section-head">
+          <h2>selected work</h2>
+        </div>
+        <div id="categories"></div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section">
+        <div class="section-head">
+          <h2>experience</h2>
+        </div>
+        <div id="experience-list"></div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about">
+        <h2 class="side-label">about</h2>
+        <div class="about-body">
+          <p class="about-text" id="about-text"></p>
+          <dl class="facts facts-about" id="about-facts"></dl>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact">
+        <h2 id="contact-heading"></h2>
+        <div class="contact-links">
+          <a class="mail" id="mail" href="#"></a>
+          <div class="links" id="contact-links"></div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="statusbar">
+      <div class="wrap statusbar-inner">
+        <span id="footer-name"></span>
+        <span id="footer-year"></span>
+      </div>
+    </footer>
+  </div>
+
+  <noscript>
+    <p class="noscript">This portfolio needs JavaScript to show its content. You can reach me at
+      <a href="mailto:guichiwawa@gmail.com">guichiwawa@gmail.com</a>.</p>
+  </noscript>
+
+  <script src="data/portfolio.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
