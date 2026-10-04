@@ -278,7 +278,7 @@
   });
   if (!about.summary || !about.summary.length) summaryList.closest('.about-summary').hidden = true;
 
-  renderFacts($('about-facts'), about.facts);
+  renderFacts($('stack-facts'), data.stack || []);
 
   // ---------- contact ----------
   $('contact-heading').textContent = p.contactHeading;

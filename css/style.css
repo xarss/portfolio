@@ -250,11 +250,7 @@ h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0; }
 
 .facts { display: grid; gap: 28px 48px; }
 
-.facts-hero { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-@media (max-width: 640px) {
-  .facts-hero { grid-template-columns: 1fr; }
-}
+.facts-hero { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
 
 .facts dt {
   display: flex;
@@ -313,6 +309,9 @@ h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0; }
 /* ---------- sections ---------- */
 
 .section { padding: 0 0 120px; }
+
+/* the projects start right under the work experience (no gap of its own) */
+#experience { padding-bottom: 0; }
 
 .section-head {
   display: flex;
@@ -713,8 +712,13 @@ h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0; }
   color: var(--muted);
 }
 
-.facts-about { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
-.facts-about dd { font-size: 16px; color: var(--text-2); }
+/* the stack section: same 3-column grid as the hero facts above it */
+.facts-stack {
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  padding-top: 36px;
+}
+
+.facts-stack dd { font-size: 16px; color: var(--text-2); }
 
 /* ---------- contact ---------- */
 

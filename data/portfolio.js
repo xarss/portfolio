@@ -28,7 +28,6 @@ const PORTFOLIO_DATA = {
         note: "Open for {blue:remote} jobs and on site jobs in {yellow:Europe}."
       },
       { label: "status", value: "Open to Fullstack, Data and IT Automation roles or freelance projects" },
-      { label: "stack",  value: "JavaScript, TypeScript, Python, SQL, PowerShell, Shell Scripting, C#, React, Next.js, .NET, Azure, Supabase, ETL, DataDog, GitHub Actions, REST APIs, AI-assisted coding (Claude Code, GitHub Copilot, Lovable)" },
       { label: "languages", value: "{blue:English} (fluent), {green:Portuguese} (native), {yellow:Spanish} (basic)" }
     ],
     email: "guichiwawa@gmail.com",
@@ -42,6 +41,22 @@ const PORTFOLIO_DATA = {
       { label: "CV",       url: "https://xarss.github.io/cv/" }
     ]
   },
+
+  // ---------------------------------------------------------------------------
+  // STACK (its own section, between the hero facts and the work experience)
+  // The technologies by category. They fill the grid left to right, top to
+  // bottom, so the first one (AI) sits top left. `color` gives the label a dot.
+  // ---------------------------------------------------------------------------
+  stack: [
+    { label: "AI",          color: "orange", value: "AI-assisted coding, Claude Code, GitHub Copilot, Lovable, Prompt Engineering, AI Integration, AI-assisted SEO/GEO" },
+    { label: "languages",   color: "blue",   value: "Python, JavaScript, TypeScript, SQL, PowerShell, Shell Scripting, C#" },
+    { label: "frameworks",  color: "purple", value: "React, Next.js, Angular, Shadcn, Vue.js, Node.js, FastAPI, .NET, Entity Framework" },
+    { label: "data",        color: "green",  value: "Pandas, NumPy, OpenCV, Snowpark, SQLAlchemy, Power BI, ETL" },
+    { label: "automation",  color: "red",    value: "Git / GitHub, GitHub Actions, CI/CD, Docker, PowerShell, Shell Scripting, Azure, DataDog, Agile / Scrum" },
+    { label: "databases",   color: "cyan",   value: "SQL Server, MySQL, MongoDB, Supabase (PostgreSQL)" },
+    { label: "other",       color: "pink",   value: "REST APIs, Webhooks, Payments (Stripe, Asaas, AbacatePay, Efí), Game Dev (Pygame, GameMaker, Unity, Godot, ct.js), Pixel Art (Pixsquare)" },
+    { label: "education",   color: "yellow", value: "Bachelor in Computer Science, Pontifical Catholic University of Paraná (PUCPR), 2025" }
+  ],
 
   // ---------------------------------------------------------------------------
   // WORK EXPERIENCE (shown first, before the projects)
@@ -218,9 +233,9 @@ const PORTFOLIO_DATA = {
     // ----- GAMES -------------------------------------------------------------
     {
       category: "games",
-      title: "Planet Researcher · Solo",
+      title: "Planet Researcher",
       tagline: "Open-world survival crafting on a procedural planet",
-      meta: "Brackeys Game Jam 2026.1",
+      meta: "Brackeys Game Jam 2026.1 · Solo",
       description: "Exploration game with an infinite, procedurally generated world, built in ct.js (JavaScript). Open-world survival crafting on a procedural planet. Submitted to Brackeys Game Jam 2026.1; the jam version, Strange Caves, is playable on itch.io, with an infinite map of 9 biomes and 21 block types to explore by ship and on foot.",
       highlights: [
         "Procedural generation using several different techniques",
@@ -285,8 +300,7 @@ const PORTFOLIO_DATA = {
   //   text / textMuted  the big statement (the second part is greyed)
   //   more              a regular paragraph under it
   //   summary           bullet list: `text`, plus `tech` (optional) shown under it
-  //   facts             label/value pairs; `color` gives the label a colored dot
-  // ---------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------
   about: {
     text: "I am {yellow:adaptable} and {cyan:hands-on}.",
     textMuted: "I enjoy dynamic environments where I can work on many different things within the same company.",
@@ -333,11 +347,6 @@ const PORTFOLIO_DATA = {
         text: "Game development as a hobby, with submissions to Global Game Jam and Brackeys Game Jam, including the pixel art for the games",
         tech: ["Pygame", "GameMaker", "Pixsquare", "Unity", "ct.js"]
       }
-    ],
-    facts: [
-      { label: "education",       color: "yellow", value: "Bachelor in Computer Science, Pontifical Catholic University of Paraná (PUCPR), 2025" },
-      { label: "speaks",          color: "orange", value: "{blue:English} (fluent), {green:Portuguese} (native), {yellow:Spanish} (basic)" },
-      { label: "also worked with", color: "blue",  value: "Angular, Vue.js, Node.js, FastAPI, Docker, Entity Framework, Pandas, NumPy, OpenCV, Snowpark, SQLAlchemy, Power BI, MySQL, MongoDB, Godot" }
     ]
   }
 };
