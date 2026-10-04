@@ -42,6 +42,7 @@
   const p = data.profile;
   $('brand').textContent = p.name;
   $('headline').append(p.headline + ' ', el('span', { class: 'muted' }, p.headlineMuted));
+  if (p.summary) $('hero-summary').append(...rich(p.summary));
   $('footer-name').textContent = p.name + ' — portfolio';
   $('footer-year').textContent = '© ' + new Date().getFullYear();
 
@@ -63,7 +64,7 @@
   const visibleCategories = data.categories.filter((cat) => data.projects.some((pr) => pr.category === cat.id));
   nav.append(el('a', { href: '#experience' }, 'work experience'));
   visibleCategories.forEach((cat) => {
-    nav.append(el('a', { href: '#' + cat.id, 'data-color': cat.color }, el('span', { class: 'dot' }), cat.label.toLowerCase()));
+    nav.append(el('a', { href: '#' + cat.id }, cat.label.toLowerCase()));
   });
   ['about', 'contact'].forEach((id) => nav.append(el('a', { href: '#' + id }, id)));
 
@@ -258,8 +259,26 @@
   });
 
   // ---------- about ----------
-  $('about-text').append(...rich(data.about.text), ' ', el('span', { class: 'muted' }, data.about.textMuted));
-  renderFacts($('about-facts'), data.about.facts);
+  const about = data.about;
+  $('about-text').append(...rich(about.text), ' ', el('span', { class: 'muted' }, about.textMuted));
+
+  if (about.more) $('about-more').append(...rich(about.more));
+  else $('about-more').hidden = true;
+
+  const summaryList = $('about-summary');
+  (about.summary || []).forEach((item) => {
+    summaryList.append(
+      el('li', {},
+        el('div', {},
+          el('span', {}, rich(item.text)),
+          item.tech && item.tech.length ? el('span', { class: 'b-tech' }, item.tech.join(' · ')) : null
+        )
+      )
+    );
+  });
+  if (!about.summary || !about.summary.length) summaryList.closest('.about-summary').hidden = true;
+
+  renderFacts($('about-facts'), about.facts);
 
   // ---------- contact ----------
   $('contact-heading').textContent = p.contactHeading;

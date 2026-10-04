@@ -17,8 +17,10 @@ const PORTFOLIO_DATA = {
   profile: {
     name: "Guilherme Schwarz",
     headline: "Guilherme Schwarz is a fullstack developer",
-    headlineMuted: "who also analyzes data and automates IT processes.",
-    // Label/value pairs shown under the headline. `note` is an optional second line.
+    headlineMuted: "who automates manual work with data and AI.",
+    // One line under the headline, in regular size.
+    summary: "3+ years of work experience in {orange:IT process automation}, {cyan:data engineering} and {yellow:AI-assisted development}.",
+    // Label/value pairs shown under it. `note` is an optional second line.
     facts: [
       {
         label: "location",
@@ -26,8 +28,8 @@ const PORTFOLIO_DATA = {
         note: "Open for {blue:remote} jobs and on site jobs in {yellow:Europe}."
       },
       { label: "status", value: "Open to Fullstack, Data and IT Automation roles or freelance projects" },
-      { label: "stack",  value: "Python, JavaScript, TypeScript, SQL, PowerShell, C#, React, Next.js, Vue.js, Angular, Node.js, FastAPI, .NET, Azure, Docker, AI Assisted Code" },
-      { label: "languages", value: "{green:Portuguese} (native), {blue:English} (fluent), {yellow:Spanish} (basic)" }
+      { label: "stack",  value: "JavaScript, TypeScript, Python, SQL, PowerShell, Shell Scripting, C#, React, Next.js, .NET, Azure, Supabase, ETL, DataDog, GitHub Actions, REST APIs, AI-assisted coding (Claude Code, GitHub Copilot, Lovable)" },
+      { label: "languages", value: "{blue:English} (fluent), {green:Portuguese} (native), {yellow:Spanish} (basic)" }
     ],
     email: "guichiwawa@gmail.com",
     // Shown in the contact section as a WhatsApp link (the number is used as is,
@@ -280,20 +282,59 @@ const PORTFOLIO_DATA = {
 
   // ---------------------------------------------------------------------------
   // ABOUT
-  // `color` on a fact gives its label a colored dot.
+  //   text / textMuted  the big statement (the second part is greyed)
+  //   more              a regular paragraph under it
+  //   summary           bullet list: `text`, plus `tech` (optional) shown under it
+  //   facts             label/value pairs; `color` gives the label a colored dot
   // ---------------------------------------------------------------------------
   about: {
-    text: "Computer Science graduate building {yellow:scalable applications}, {cyan:extracting insights from data} and {orange:automating IT processes}.",
-    textMuted: "AI augmented and focused on shipping.",
+    text: "I am {yellow:adaptable} and {cyan:hands-on}.",
+    textMuted: "I enjoy dynamic environments where I can work on many different things within the same company.",
+    more: "My favorite work is {orange:process automation}, whether it is payments, reports or manual tasks. I am always open to new challenges and I really like to participate in {purple:game jams} and to cooperate with {green:non-profit organizations}.",
+    summary: [
+      {
+        text: "Work experience automating manual work for non-technical business teams in agile teams",
+        tech: ["React", "Next.js", "JavaScript", ".NET", "SQL Server", "Azure", "PowerShell", "Shell Scripting", "DataDog", "ETL"]
+      },
+      {
+        text: "Work experience implementing and supporting CI/CD pipelines",
+        tech: ["GitHub", "GitHub Actions"]
+      },
+      {
+        text: "Work experience in AI-assisted coding, building and maintaining full production codebases",
+        tech: ["GitHub Copilot", "Claude Code"]
+      },
+      {
+        text: "Work experience creating MVPs with AI tools, building the first version in {green:1 day} and getting the first paying client in {green:4 days}",
+        tech: ["Lovable", "Claude Code", "Supabase", "JavaScript", "webhook management", "payment integration"]
+      },
+      {
+        text: "Work experience in fast prototyping: validating ideas in Lovable, then rebuilding them as production code with Claude Code, with optimized database design and code architecture, quickly auditing and fixing AI-generated code"
+      },
+      {
+        text: "Solid knowledge creating optimized internal Data Lakes, replacing {red:6+ hour API extractions} with {green:near-instant queries}",
+        tech: ["SQL Server", "PowerShell", "Shell Scripting", "ETL", "DataDog"]
+      },
+      {
+        text: "Solid knowledge integrating payments across multiple platforms",
+        tech: ["Stripe", "Asaas", "AbacatePay", "Efí"]
+      },
+      {
+        text: "Solid knowledge in REST APIs, webhooks and backend services",
+        tech: ["Supabase"]
+      },
+      {
+        text: "Work experience in AI-assisted SEO/GEO, driving large-scale organic growth"
+      },
+      {
+        text: "Game development as a hobby, with submissions to Global Game Jam and Brackeys Game Jam, including the pixel art for the games",
+        tech: ["Pygame", "GameMaker", "Pixsquare", "Unity", "ct.js"]
+      }
+    ],
     facts: [
-      { label: "education",   color: "yellow", value: "B.S. in Computer Science, Pontifical Catholic University of Paraná (PUCPR), 2025" },
-      { label: "speaks",      color: "orange", value: "Portuguese (native), English (fluent), Spanish (basic)" },
-      { label: "languages",   color: "blue",   value: "Python, JavaScript, TypeScript, SQL, PowerShell, C#" },
-      { label: "frameworks",  color: "purple", value: "Angular, Shadcn, Next.js, Vue.js, Node.js, FastAPI, .NET, Entity Framework" },
-      { label: "data",        color: "green",  value: "Pandas, NumPy, OpenCV, Snowpark, SQLAlchemy, Power BI" },
-      { label: "automation",  color: "red",    value: "Git / GitHub, CI/CD, Docker, PowerShell, Agile / Scrum" },
-      { label: "databases",   color: "cyan",   value: "SQL Server, MySQL, MongoDB" },
-      { label: "other",       color: "pink",   value: "REST APIs, Prompt Engineering, AI Integration, Game Dev (Pygame, Godot, Unity), Pixel Art" }
+      { label: "education",       color: "yellow", value: "Bachelor in Computer Science, Pontifical Catholic University of Paraná (PUCPR), 2025" },
+      { label: "speaks",          color: "orange", value: "{blue:English} (fluent), {green:Portuguese} (native), {yellow:Spanish} (basic)" },
+      { label: "also worked with", color: "blue",  value: "Angular, Vue.js, Node.js, FastAPI, Docker, Entity Framework, Pandas, NumPy, OpenCV, Snowpark, SQLAlchemy, Power BI, MySQL, MongoDB, Godot" }
     ]
   }
 };
