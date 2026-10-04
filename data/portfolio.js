@@ -19,7 +19,7 @@ const PORTFOLIO_DATA = {
     headline: "Guilherme Schwarz is a fullstack developer",
     headlineMuted: "who automates manual work with data and AI.",
     // One line under the headline, in regular size.
-    summary: "3+ years of work experience in {orange:IT process automation}, {cyan:data engineering} and {yellow:AI-assisted development}.",
+    summary: "4+ years of work experience in {orange:IT process automation}, {cyan:data engineering} and {yellow:AI-assisted development}. Computer Science graduate",
     // Label/value pairs shown under it. `note` is an optional second line.
     facts: [
       {
@@ -57,7 +57,7 @@ const PORTFOLIO_DATA = {
     { label: "other",       color: "pink",   value: "REST APIs, Webhooks, Payments (Stripe, Asaas, AbacatePay, Efí), Agile / Scrum" },
     { label: "game development", color: "purple", value: "ct.js, GameMaker, Unity, Pygame, Godot, Pixel Art (Pixsquare)" },
     // (a line break in a value starts a new line)
-    { label: "education",   color: "yellow", value: "Bachelor in Computer Science, Pontifical Catholic University of Paraná (PUCPR)\nDual high school diploma: Brazilian high school and Way American School" }
+    { label: "education",   color: "yellow", value: "Bachelor in Computer Science, Pontifical Catholic University of Paraná (PUCPR)\nBilingual dual high school diploma: Brazilian high school and Way American School" }
   ],
 
   // ---------------------------------------------------------------------------
@@ -71,7 +71,7 @@ const PORTFOLIO_DATA = {
       role: "Data Analyst & Full-Stack Developer",
       period: "Jan 2023 — Jan 2026",
       path: "Data Analyst & Full-Stack Developer (Jan 2024 — Jan 2026), Data Analyst Trainee (Jan 2023 — Jan 2024)",
-      summary: "Supporting business teams with data, automation and internal tools. In practice, a software engineer role focused on IT process automation and data engineering, building full-stack tools for non-technical users.",
+      summary: "Supporting international business teams with data, automation and internal tools. In practice, a software engineer role focused on IT process automation and data engineering, building full-stack tools for non-technical users.",
       bullets: [
         {
           text: "Created an internal Data Lake that replaced {red:6+ hour vendor API extractions} with {green:up-to-date SQL tables}, enabling {green:near-instant queries}, live dashboards and data-driven automations.",
@@ -91,7 +91,7 @@ const PORTFOLIO_DATA = {
           text: "Automated data reports that used to be requested and built manually, {green:delivering ready-to-use data} to Subject Matter Experts."
         },
         {
-          text: "Acted as the bridge between business teams and IT, turning manual processes into simple tools."
+          text: "Acted as the bridge between international business teams and IT, turning manual processes into simple tools."
         }
       ],
       technologies: [
@@ -298,7 +298,7 @@ const PORTFOLIO_DATA = {
     },
     {
       category: "games",
-      title: "pygame-base-framework",
+      title: "Pygame Base Framework",
       tagline: "Open-source boilerplate to start Pygame games faster",
       meta: "Personal project · Open source",
       description: "Open-source boilerplate framework that speeds up building new Pygame games. I wanted to build my own library to ease the process of making Pygame games.",
