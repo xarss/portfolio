@@ -53,7 +53,7 @@ const PORTFOLIO_DATA = {
       company: "ExxonMobil",
       role: "Data Analyst & Full-Stack Developer",
       period: "Jan 2023 — Jan 2026",
-      path: "Data Analyst Trainee (Jan 2023 — Jan 2024) → Data Analyst & Full-Stack Developer (Jan 2024 — Jan 2026)",
+      path: "Data Analyst & Full-Stack Developer (Jan 2024 — Jan 2026), Data Analyst Trainee (Jan 2023 — Jan 2024)",
       summary: "Supporting business teams with data, automation and internal tools. In practice, a software engineer role focused on IT process automation and data engineering, building full-stack tools for non-technical users.",
       bullets: [
         {
@@ -295,6 +295,9 @@ const PORTFOLIO_DATA = {
       {
         text: "Work experience automating manual work for non-technical business teams in agile teams",
         tech: ["React", "Next.js", "JavaScript", ".NET", "SQL Server", "Azure", "PowerShell", "Shell Scripting", "DataDog", "ETL"]
+      },
+      {
+        text: "Work experience with international, non-IT teams"
       },
       {
         text: "Work experience implementing and supporting CI/CD pipelines",

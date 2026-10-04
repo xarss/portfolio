@@ -250,7 +250,11 @@ h1, h2, h3, p, dl, dd, ul { margin: 0; padding: 0; }
 
 .facts { display: grid; gap: 28px 48px; }
 
-.facts-hero { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+.facts-hero { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+@media (max-width: 640px) {
+  .facts-hero { grid-template-columns: 1fr; }
+}
 
 .facts dt {
   display: flex;
