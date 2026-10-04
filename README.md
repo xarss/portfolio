@@ -27,6 +27,13 @@ Open `data/portfolio.js`. Everything on the page comes from there.
   Experience uses red for the "before" numbers and green for the good results.
 - **Open a project from a link**: `index.html#rifa-no-pix` (the title, lowercased with dashes).
 
+## Mobile
+
+At 960px wide and below the menu becomes a hamburger dropdown (name, theme icon and hamburger in a
+sticky header). The menu closes when a link is tapped, on Escape, or when tapping outside it. Phones
+(640px and below) also get tighter spacing. Breakpoints are at the bottom of `css/style.css`
+(and `min-width: 961px` in `js/main.js` must match the 960px one).
+
 ## Themes
 
 The default follows the device's light/dark setting. The button in the header shows the theme you are

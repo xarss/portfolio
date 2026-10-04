@@ -66,6 +66,27 @@
   });
   ['experience', 'about', 'contact'].forEach((id) => nav.append(el('a', { href: '#' + id }, id)));
 
+  // ---------- mobile menu (hamburger) ----------
+  // On small screens the menu is a dropdown opened by the hamburger button.
+  const menuButton = $('menu-toggle');
+  const desktop = window.matchMedia('(min-width: 961px)');
+
+  function setMenu(open) {
+    nav.classList.toggle('open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+
+  menuButton.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+  nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('click', (e) => {
+    if (nav.classList.contains('open') && !e.target.closest('.site-header')) setMenu(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menuButton.focus(); }
+  });
+  desktop.addEventListener('change', () => setMenu(false));
+
   // ---------- categories + projects ----------
   const categoriesRoot = $('categories');
   visibleCategories.forEach((cat) => {
@@ -185,7 +206,9 @@
 
     // If a project above closed and pushed this one out of view, bring it back.
     setTimeout(() => {
-      if (details.getBoundingClientRect().top < 0) details.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // (the sticky header on small screens covers the top part of the page)
+      const covered = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+      if (details.getBoundingClientRect().top < covered) details.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 340);
   }
 

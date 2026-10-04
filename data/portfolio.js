@@ -23,10 +23,11 @@ const PORTFOLIO_DATA = {
       {
         label: "location",
         value: "Curitiba, Brazil",
-        note: "Looking for {blue:remote} jobs, or jobs in {yellow:Europe} where the company sponsors my work visa."
+        note: "Open for {blue:remote} jobs and on site jobs in {yellow:Europe}."
       },
-      { label: "status", value: "Open to Fullstack, Data and IT Automation roles" },
-      { label: "stack",  value: "Python, JavaScript, TypeScript, SQL, PowerShell, C#, React, Next.js, Vue.js, Angular, Node.js, FastAPI, .NET, Azure, Docker" }
+      { label: "status", value: "Open to Fullstack, Data and IT Automation roles or freelance projects" },
+      { label: "stack",  value: "Python, JavaScript, TypeScript, SQL, PowerShell, C#, React, Next.js, Vue.js, Angular, Node.js, FastAPI, .NET, Azure, Docker, AI Assisted Code" }
+      { label: "languages",  value: "" }
     ],
     email: "guichiwawa@gmail.com",
     contactHeading: "Let's talk.",
@@ -171,7 +172,7 @@ const PORTFOLIO_DATA = {
     // ----- GAMES -------------------------------------------------------------
     {
       category: "games",
-      title: "Planet Researcher",
+      title: "Planet Researcher · Solo",
       tagline: "Open-world survival crafting on a procedural planet",
       meta: "Brackeys Game Jam 2026.1",
       description: "Exploration game with an infinite, procedurally generated world, built in ct.js (JavaScript). Open-world survival crafting on a procedural planet. Submitted to Brackeys Game Jam 2026.1; the jam version, Strange Caves, is playable on itch.io, with an infinite map of 9 biomes and 21 block types to explore by ship and on foot.",
@@ -279,7 +280,7 @@ const PORTFOLIO_DATA = {
   // `color` on a fact gives its label a colored dot.
   // ---------------------------------------------------------------------------
   about: {
-    text: "Computer Science graduate building {yellow:scalable applications}, {cyan:extracting insights from data}, and {orange:automating IT processes}.",
+    text: "Computer Science graduate building {yellow:scalable applications}, {cyan:extracting insights from data} and {orange:automating IT processes}.",
     textMuted: "AI augmented and focused on shipping.",
     facts: [
       { label: "education",   color: "yellow", value: "B.S. in Computer Science, Pontifical Catholic University of Paraná (PUCPR), 2025" },
